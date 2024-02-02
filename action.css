@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container{
+    background-image: url("files/bg.png");
+    background-repeat: no-repeat;
+}
