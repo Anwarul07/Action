@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  overflow: hidden;
+}
 .container {
   background-image: url("files/bg.png");
   background-repeat: no-repeat;
@@ -32,8 +35,11 @@
   bottom: 0;
   left: 70vw;
 }
-.dianomation{
-  animation: diano .4s  linear;
+.dianomation {
+  animation: diano 0.7s linear;
+}
+.obstanomation{
+  animation: obsimation 1.5s linear infinite;
 }
 
 @keyframes diano {
@@ -41,9 +47,18 @@
     bottom: 0rem;
   }
   50% {
-    bottom:25rem;
+    bottom: 25rem;
   }
   100% {
     bottom: 0rem;
+  }
+}
+
+@keyframes obsimation {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -10vw;
   }
 }
