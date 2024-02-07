@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   overflow: hidden;
 }
 .container {
@@ -35,10 +35,13 @@ body{
   bottom: 0;
   left: 70vw;
 }
+.gameover {
+  visibility: hidden;
+}
 .dianomation {
   animation: diano 0.7s linear;
 }
-.obstanomation{
+.obstanomation {
   animation: obsimation 1.5s linear infinite;
 }
 
