@@ -1,7 +1,12 @@
 score = 0;
 cross = true;
 let sound = new Audio("files/music.mp3")
-// sound.play();
+let end = new Audio("files/gameover.mp3")
+
+setTimeout(() => {
+    sound.play()
+}, 1000);
+
 document.onkeydown = (e) => {
 
     if ((e.keyCode === 38) || (e.keyCode === 104)) {
@@ -45,6 +50,13 @@ setInterval(() => {
     if ((offsetx < 200) && (offsetY < 80)) {
         gameOver.classList.add("Over")
         obsatacle.classList.remove("obstanomation");
+
+        end.play()
+        setTimeout(() => {
+            end.pause();
+            sound.pause();
+        }, 1000);
+
     } else if (offsetx < 200 && cross) {
         score += 1;
         scoreupdate(score)
@@ -55,9 +67,9 @@ setInterval(() => {
 
         setTimeout(() => {
             animdur = parseFloat(window.getComputedStyle(obsatacle, null).getPropertyValue("animation-duration"));
-            newDur= animdur-0.1;
-            obsatacle.style.animationDuration=newDur+ 's'
-        }, 10);
+            newDur = animdur - 0.1;
+            obsatacle.style.animationDuration = newDur + 's'
+        }, 500);
 
     }
 
