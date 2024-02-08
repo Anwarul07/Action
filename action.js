@@ -10,7 +10,23 @@ document.onkeydown = (e) => {
         }, 700)
         console.log("cliked", e.keyCode)
     }
+
+
+    if (e.keyCode === 102 || e.keyCode === 39) {
+        dianos = document.querySelector(".dino")
+        dxl = parseInt(window.getComputedStyle(dianos, null).getPropertyValue("left"))
+        dianos.style.left = dxl + 112 + "px"
+    }
+
+    if (e.keyCode === 100 || e.keyCode === 37) {
+        dianos = document.querySelector(".dino")
+        dxl = parseInt(window.getComputedStyle(dianos, null).getPropertyValue("left"))
+        dianos.style.left = dxl - 112 + "px"
+    }
 }
+
+
+
 
 setInterval(() => {
     dianos = document.querySelector(".dino")
@@ -28,6 +44,5 @@ setInterval(() => {
         gameOver.style.visibility = "visible";
         obsatacle.classList.remove("obstanomation");
     }
-    console.log("checking....")
 
 }, 100);
