@@ -37,6 +37,19 @@ body {
 }
 .gameover {
   visibility: hidden;
+  text-align: center;
+
+}
+#scoreCount{
+text-align: center;
+}
+
+.Over{
+  color:#ff0000 ;
+  font-size: xx-large;
+  font-weight: bolder;
+  visibility: visible;
+  text-align: center;
 }
 .dianomation {
   animation: diano 0.7s linear;

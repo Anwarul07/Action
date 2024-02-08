@@ -43,11 +43,15 @@ setInterval(() => {
     offsetY = Math.abs(dy - oy);
 
     if ((offsetx < 200) && (offsetY < 80)) {
-        gameOver.style.visibility = "visible";
+        gameOver.classList.add("Over")
         obsatacle.classList.remove("obstanomation");
-    } else {
+    } else if (offsetx < 200 && cross) {
         score += 1;
         scoreupdate(score)
+        cross = false;
+        setTimeout(() => {
+            cross = true;
+        }, 1000);
 
     }
 
