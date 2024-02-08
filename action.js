@@ -53,6 +53,12 @@ setInterval(() => {
             cross = true;
         }, 1000);
 
+        setTimeout(() => {
+            animdur = parseFloat(window.getComputedStyle(obsatacle, null).getPropertyValue("animation-duration"));
+            newDur= animdur-0.1;
+            obsatacle.style.animationDuration=newDur+ 's'
+        }, 10);
+
     }
 
 }, 100);

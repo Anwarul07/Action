@@ -55,7 +55,7 @@ text-align: center;
   animation: diano 0.7s linear;
 }
 .obstanomation {
-  animation: obsimation 1.5s linear infinite;
+  animation: obsimation 2 .5s linear infinite;
 }
 
 @keyframes diano {
