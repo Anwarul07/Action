@@ -1,3 +1,5 @@
+score = 0;
+cross = true;
 let sound = new Audio("files/music.mp3")
 // sound.play();
 document.onkeydown = (e) => {
@@ -43,6 +45,14 @@ setInterval(() => {
     if ((offsetx < 200) && (offsetY < 80)) {
         gameOver.style.visibility = "visible";
         obsatacle.classList.remove("obstanomation");
+    } else {
+        score += 1;
+        scoreupdate(score)
+
     }
 
 }, 100);
+
+function scoreupdate(score) {
+    scoreCount.innerHTML = "your Score is " + score
+}
