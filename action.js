@@ -67,7 +67,7 @@ setInterval(() => {
 
         setTimeout(() => {
             animdur = parseFloat(window.getComputedStyle(obsatacle, null).getPropertyValue("animation-duration"));
-            newDur = animdur - 0.1;
+            newDur = animdur - 0.03;
             obsatacle.style.animationDuration = newDur + 's'
         }, 500);
 
